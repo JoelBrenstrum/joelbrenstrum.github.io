@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Joel Brenstrum - I do stuff</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="js/thirdparty/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src='js/thirdparty/knockout-3.1.0.js' type='text/javascript'></script>
+
+        <script src="js/Foundation.js" type="text/javascript"></script>
+        <script src="js/viewmodels/viewModel.js" type="text/javascript"></script>
+
+        <link href="//fonts.googleapis.com/css?family=Questrial:400" rel="stylesheet" type="text/css">
+        <link href="css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="css/header.css" rel="stylesheet" type="text/css"/>
+        <link href="css/nav.css" rel="stylesheet" type="text/css"/>
+        <script>
+            var loaded = function() {
+                $j.sharedJSONData = $j.getJsonData("sharedJson");
+                $j.updateView($j.currentView);
+                ko.applyBindings($j.viewModel);
+            }
+        </script>
+    </head>
+    <body onload="loaded()">
+        <div id="header_div">
+            <div class="central_div">
+                <div  id=title_div data-bind="text: title"></div>
+                <div id="subtitle_div" data-bind="text: header"></div>
+            </div>
+        </div>
+        <div  id="container_div">
+            <div id="nav_div">
+                <div id="nav_inner_div">
+                    <ul data-bind="template: { name: 'menu-element-template', foreach: menuElements }"></ul>
+                    <script type="text/html" id="menu-element-template">
+                        <li>
+                            <a data-bind=" if:isLink, visibile: isLink, attr: { href: url }">
+                                <span data-bind="text: title"></span>
+                            </a>
+                            <a data-bind="css:{selected_page:selected()}, ifnot:isLink, visibile: !isLink(), click: function(object){$j.updateView(object.url);}">
+                                <span data-bind="text: title"></span> <!-- data bind some css to the url, if its blank dont make it look clickable-->
+                            </a>
+                            <ul data-bind="template: { if: selected, name: 'submenu-element-template', foreach: $parent.bodyElements }"></ul>
+                            </script>
+                            <script type="text/html" id="submenu-element-template">
+                            <li data-bind="">
+                                <a  data-bind=" text: (id.length > 20 ? id.substring(0, 20).trim() + '...' : id), attr: { href: '#'+id }"></a>
+                            </li>
+                            </script>
+                        </div>
+                    </div>
+                    <div class="central_div" id="inner_div">
+                        <div id="header_spacefiller_div"></div>
+                        <div data-bind="template: { name: 'body-element-template', foreach: bodyElements }"></div>
+                        <script type="text/html" id="body-element-template">
+                            <span class="anchor" data-bind="if:id, attr: { id: id }"></span>                  
+                            <h3 data-bind="text: heading"></h3>
+                            <p><span data-bind="html: content"></span></p>
+                            </script>
+
+
+
+
+                        </div>
+                    </div>
+                </body>
+            </html>
