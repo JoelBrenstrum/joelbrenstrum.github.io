@@ -6,4 +6,4 @@ export module ViewEnum {
 
 };
 
-export type ViewEnum = 'index' | 'projects' | 'contact' | 'cv';
+export type ViewEnum = 'index' | 'projects' | 'contact' | 'cv' | 'sharedJson';

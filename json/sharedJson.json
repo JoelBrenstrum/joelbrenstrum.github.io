@@ -1,29 +1,30 @@
 {
     "title": "Joel Brenstrum",
-    "menuElements":  [{
-            "isLink":false,
-            "selected":true,
-            "title":"Home",
-            "url": "viewsEnum.index"
+    "menuElements": [{
+            "isLink": false,
+            "selected": true,
+            "title": "Home",
+            "url": "index"
         },
         {
-            "isLink":false,
-            "title":"Projects",
-            "url": "viewsEnum.projects"
+            "isLink": false,
+            "title": "Projects",
+            "url": "projects"
         },
         {
-            "isLink":false,
-            "title":"Contact",
-            "url": "viewsEnum.contact"
+            "isLink": false,
+            "title": "Contact",
+            "url": "contact"
         },
         {
-            "isLink":false,
-            "title":"CV",
-            "url": "viewsEnum.cv"
+            "isLink": false,
+            "title": "CV",
+            "url": "cv"
         },
         {
-            "isLink":true,
-            "title":"Google",
+            "isLink": true,
+            "title": "Google",
             "url": "http://www.google.com"
-        }]
+        }
+    ]
 }
