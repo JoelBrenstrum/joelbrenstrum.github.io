@@ -1,0 +1,32 @@
+#body_div {
+    display:flex;
+    flex-direction: column;
+    #header_div{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    #container_div{
+        .stuff{
+            margin-left: 8%;
+            width: 80%;
+            max-width: 700px;
+        }
+        width:100%;
+        justify-content: center;
+        display: flex;
+        ul {
+            padding-left: 10px; 
+                 
+        li{
+            &.root-node:not(:first-child) {
+                padding-top: 3px; 
+                    
+                }      
+                padding-left: 5px; 
+            }
+        }
+        
+    }
+}
+

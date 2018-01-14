@@ -13,60 +13,88 @@ and open the template in the editor.
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js'></script>
-
-
-    <script data-main="scripts/viewmodels/MainViewModel.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Questrial:400" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/base.css" rel="stylesheet" type="text/css" />
-    <link href="css/header.css" rel="stylesheet" type="text/css" />
-    <link href="css/nav.css" rel="stylesheet" type="text/css" />
-    <script>
-    </script>
+
 </head>
 
 <body>
+        <div id="body_div">
     <div id="header_div">
         <div class="central_div">
-            <div id=title_div data-bind="text: title"></div>
-            <div id="subtitle_div" data-bind="text: header"></div>
+            <div id="title_div">Joel Brenstrum</div>
+            <div id="subtitle_div">i do stuff</div>
         </div>
     </div>
     <div id="container_div">
-        <div id="nav_div">
-            <div id="nav_inner_div">
-                <ul data-bind="template: { name: 'menu-element-template', foreach: menuElements }"></ul>
-                <script type="text/html" id="menu-element-template">
-                    <li>
-                        <a data-bind=" if:isLink, visible: isLink, attr: { href: url }">
-                            <span data-bind="text: title"></span>
-                        </a>
-                        <a data-bind="css:{selected_page:selected()}, ifnot:isLink, visibile: !isLink(), click: function(object){$parent.updateView(object.url);}">
-                            <span data-bind="text: title"></span>
-                            <!-- data bind some css to the url, if its blank dont make it look clickable-->
-                        </a>
-                        <ul data-bind="template: { if: selected, name: 'submenu-element-template', foreach: $parent.bodyElements }"></ul>
-                </script>
-                <script type="text/html" id="submenu-element-template">
-                    <li data-bind="">
-                        <a data-bind=" text: (id.length > 20 ? id.substring(0, 20).trim() + '...' : id), attr: { href: '#'+id }"></a>
-                    </li>
-                </script>
-            </div>
-        </div>
-        <div class="central_div" id="inner_div">
-            <div id="header_spacefiller_div"></div>
-            <div data-bind="template: { name: 'body-element-template', foreach: bodyElements }"></div>
-            <script type="text/html" id="body-element-template">
-                <span class="anchor" data-bind="if:id, attr: { id: id }"></span>
-                <h3 data-bind="text: heading"></h3>
-                <p><span data-bind="html: content"></span></p>
-            </script>
+      <ul class="stuff">
+          <li class="thingsiam root-node">
+              things i am
+              <ul>
+                  <li>web developer</li>
+                  <li>software engineer</li>
+                  <li>loud</li>
+                  
+<li>professional crypto trader</li>
+                  
+                  <li>friends:
+                    <ul>
+                  <li>bffs:
+                      <ul>
+                  <li>typescript/javascript</li>
+                  
+                  <li>html</li>
+                  <li>google</li>
+                  
+              </ul></li>
+              <li>mates:
+                <ul>
+            <li>c#</li>
+            <li>git</li>
+            <li>tfs</li>
+            <li>css</li>
+            <li>java</li>
+            <li>powershell</li>
+            <li>bash</li>
+            
+        </ul></li>
+        <li>acquaintances:
+            <ul>
+        <li>sql</li>
+    </ul></li>
+    <li>met in a bar once:
+        <ul>
+    <li>haskell</li>
+    <li>actionscript</li>
+    <li>powershell scripts</li>
+    
+</ul></li>
+</ul></li>
 
+              </ul>
+          </li>
+          <li class="root-node">things i am not
+          <ul>
+                  <li>ux designer</li>
+                  <li>quiet</li>
+              </ul>
+              </li>
 
-
-
-        </div>
+              <li class="root-node">things i like
+                    <ul>
+                            <li>games</li>
+                            <li>3d printing</li>
+                            <li>beer</li>
+                            <li>mechanics</li>
+                            <li>making my personal website</li>
+                            <li>providing google with information about myself</li>
+                        </ul>
+                        </li>
+      </ul>
     </div>
+</div>
+    
 </body>
 
 </html>
