@@ -12,6 +12,10 @@
   justify-content: center;
   display: flex;
 }
+#body_div #container_div .profile{
+  width:200px;
+  height:200px;
+}
 #body_div #container_div .stuff {
   margin-left: 8%;
   width: 80%;
