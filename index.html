@@ -1,114 +1,168 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Joel Brenstrum - I do stuff</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js'></script>
-    <link href="//fonts.googleapis.com/css?family=Questrial:400" rel="stylesheet" type="text/css">
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/base.css" rel="stylesheet" type="text/css" />
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>joel brenstrum — i do stuff</title>
+<meta name="description" content="joel brenstrum. senior software engineer in auckland. dad. loud.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
 </head>
+<body class="jb">
+<a class="skip mono" href="#tree">skip to the list (it's all list)</a>
 
-<body>
-    <div id="body_div">
-        <div id="header_div">
-            <div class="central_div">
-                <div id="title_div">Joel Brenstrum</div>
-                <div id="subtitle_div">i do stuff</div>
-            </div>
-        </div>
-        <div id="container_div">
-            <ul class="stuff">
-                <li class="thingsiam root-node">
-                    things i am
-                    <ul>
-                        <li>web developer</li>
-                        <li>software engineer</li>
-                        <li>loud</li>
-                        <li>friends:
-                            <ul>
-                                <li>bffs:
-                                    <ul>
-                                        <li>typescript/javascript</li>
-                                        <li>react (
-                                            <a href="/reaction"></a>
-                                            <a href="/material-icon-search">material-icon-search</a>
-                                            )</li>
-                                        <li>html</li>
-                                        <li>google</li>
+<header id="top" class="mast">
+  <p class="kicker mono">joel.brenstrum.com <span aria-hidden="true">/</span> auckland, nz <span aria-hidden="true">/</span> index of one (1) person</p>
+  <h1 class="name"><span class="n1">joel</span> <span class="n2">brenstrum</span></h1>
+  <p class="tagline"><span class="dash" aria-hidden="true">—</span> i do stuff<span class="dot" aria-hidden="true">.</span></p>
 
-                                    </ul>
-                                </li>
-                                <li>mates:
-                                    <ul>
-                                        <li>c#</li>
-                                        <li>git</li>
-                                        <li>tfs</li>
-                                        <li>css</li>
-                                        <li>java</li>
-                                        <li>powershell</li>
-                                        <li>bash</li>
-                                        <li>flutter</li>
-
-                                    </ul>
-                                </li>
-                                <li>acquaintances:
-                                    <ul>
-                                        <li>sql</li>
-                                    </ul>
-                                </li>
-                                <li>met in a bar once:
-                                    <ul>
-                                        <li>haskell</li>
-                                        <li>actionscript</li>
-                                        <li>powershell scripts</li>
-
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </li>
-                <li class="root-node">things i am not
-                    <ul>
-                        <li>ux designer</li>
-                        <li>quiet</li>
-                    </ul>
-                </li>
-
-                <li class="root-node">things i like
-                    <ul>
-                        <li>games</li>
-                        <li>3d printing</li>
-                        <li>beer</li>
-                        <li>mechanics</li>
-                        <li>making my personal website</li>
-                        <li>providing google with information about myself</li>
-                    </ul>
-                </li>
-                <li class="root-node">things you might like
-                    <ul>
-                        <li><a href="https://github.com/JoelBrenstrum">github</a></li>
-                        <li><a href="https://www.linkedin.com/in/joel-brenstrum-985b7880">linkedin</a> </li>
-                </li>
-            </ul>
-            </li>
-            </ul>
-            <div class="profile"><img src="https://avatars0.githubusercontent.com/u/4349208?s=460&v=4"></img></div>
-        </div>
+  <figure class="mug">
+    <div class="mug-frame">
+      <img src="assets/joel.jpg" alt="joel, looking roughly like this" width="460" height="460">
+      <span class="dim dim-w mono" aria-hidden="true">230</span>
+      <span class="dim dim-h mono" aria-hidden="true">230</span>
     </div>
+    <figcaption class="mono">fig. 1 — joel. not to scale.</figcaption>
+  </figure>
 
+  <a class="hire mono" href="#serious">hiring? here's the serious bit <span aria-hidden="true">↓</span></a>
+
+  <div class="controls mono" data-js-only hidden>
+    <button type="button" data-all="open">[+] expand all</button>
+    <button type="button" data-all="close">[−] collapse all</button>
+  </div>
+</header>
+
+<main id="tree" class="tree">
+
+  <details class="branch b1" open>
+    <summary><span class="num mono">01</span><span class="h">things i am</span></summary>
+    <ul class="leaves">
+      <li>senior software engineer, <span class="since">since 2014</span></li>
+      <li>dad</li>
+      <li class="loud"><span>loud</span></li>
+      <li>former dairy farm hand <span class="aside mono">(can milk a 44-aside herringbone, will not be demonstrating)</span></li>
+      <li>first-class honours in computer science, <span class="mutter">which i bring up less than you'd think</span></li>
+    </ul>
+  </details>
+
+  <details class="branch b2" open>
+    <summary><span class="num mono">02</span><span class="h">things i am not</span></summary>
+    <ul class="leaves">
+      <li class="quiet">quiet</li>
+      <li class="ux">a <span class="ux-btn" title="this does nothing. sorry.">ux designer</span></li>
+      <li class="designer">the person who designed this website <span class="aside mono">(claude did. i just argued with it)</span></li>
+    </ul>
+  </details>
+
+  <details class="branch b3 friends" open>
+    <summary><span class="num mono">03</span><span class="h">friends</span> <span class="axis mono" aria-hidden="true">social distance →</span></summary>
+    <ol class="distance">
+      <li class="tier t1">
+        <span class="tier-label mono">bffs <span class="dist">0.0 m</span></span>
+        <ul class="items">
+          <li>typescript</li><li>react</li><li>react native</li><li>node</li><li>claude</li>
+        </ul>
+      </li>
+      <li class="tier t2">
+        <span class="tier-label mono">mates <span class="dist">1.5 m</span></span>
+        <ul class="items">
+          <li>pnpm</li><li>npm</li><li>google cloud</li><li>prisma</li><li>sql</li><li>git</li><li>css</li><li>vs code</li><li>gemini</li>
+        </ul>
+      </li>
+      <li class="tier t3">
+        <span class="tier-label mono">it's complicated <span class="dist">varies</span></span>
+        <ul class="items">
+          <li class="onoff" data-ghost="salesforce">salesforce</li>
+        </ul>
+      </li>
+      <li class="tier t4">
+        <span class="tier-label mono">exes, we don't talk anymore <span class="dist">blocked</span></span>
+        <ul class="items">
+          <li><s>knockout</s></li><li><s>c#</s></li><li><s>entity framework</s></li><li><s>visual studio</s></li><li><s>visualforce</s></li><li><s>tfs</s></li><li><s>jquery</s></li>
+        </ul>
+      </li>
+      <li class="tier t5">
+        <span class="tier-label mono">met in a bar once <span class="dist">unclear</span></span>
+        <ul class="items">
+          <li>haskell</li><li>actionscript</li>
+        </ul>
+      </li>
+    </ol>
+  </details>
+
+  <details class="branch b4" open>
+    <summary><span class="num mono">04</span><span class="h">things i like</span></summary>
+    <ul class="leaves likes">
+      <li>beer <span class="aside mono">(drinking it, brewing it)</span></li>
+      <li class="starlet">my <span class="plate mono">1983</span> toyota starlet</li>
+      <li>3d printing <span class="aside mono">(see: the background of this page)</span></li>
+      <li>hobby projects</li>
+      <li>gaming</li>
+      <li>cooking</li>
+      <li>travel</li>
+    </ul>
+  </details>
+
+  <details class="branch b5" open>
+    <summary><span class="num mono">05</span><span class="h">things i've made</span></summary>
+    <ul class="leaves made">
+      <li><span class="tag mono">at work</span> dragged a salesforce visualforce frontend into react</li>
+      <li><span class="tag mono">at work</span> a react native app for people doing field service</li>
+      <li><span class="tag mono">at work</span> turned an html5 quoting tool into a webgl one, so now it's <span class="three">3d</span></li>
+      <li><span class="tag mono">for the kid</span> <a href="https://babble.brenstrum.com">babble</a>, a calm baby tracker <span class="aside mono">(web, phone, and it talks to home assistant)</span></li>
+      <li><span class="tag mono">for the kid</span> babynamr, swipe on baby names with your partner until you both like one</li>
+      <li><span class="tag mono">for fun</span> <a href="/cuttlelist/">cuttlelist</a>, a cut list optimiser <span class="aside mono">(measure twice, let the computer cut once)</span></li>
+      <li><span class="tag mono">for fun</span> <a href="/material-icon-search">material-icon-search</a></li>
+    </ul>
+  </details>
+
+  <details class="branch b6" open>
+    <summary><span class="num mono">06</span><span class="h">currently</span></summary>
+    <ul class="leaves">
+      <li>building field service and job management software at nz trade group</li>
+    </ul>
+  </details>
+
+  <details class="branch b7" open>
+    <summary><span class="num mono">07</span><span class="h">things you might like</span></summary>
+    <ul class="leaves links">
+      <li><a href="https://github.com/JoelBrenstrum">github</a> <span class="mono url" aria-hidden="true">github.com/JoelBrenstrum</span></li>
+      <li><a href="https://www.linkedin.com/in/joel-brenstrum-985b7880">linkedin</a> <span class="mono url" aria-hidden="true">linkedin.com/in/joel-brenstrum</span></li>
+    </ul>
+  </details>
+
+</main>
+
+<section id="serious" class="serious" aria-labelledby="serious-h">
+  <div class="serious-head">
+    <p class="mono kicker2">service history</p>
+    <h2 id="serious-h" class="h">the serious bit</h2>
+    <a class="cv mono" href="mailto:joel.brenstrum@gmail.com?subject=cv%20request">cv on request <span aria-hidden="true">→</span> <span class="small">joel.brenstrum@gmail.com</span></a>
+  </div>
+  <table class="log">
+    <caption class="mono">joel brenstrum, auckland, new zealand</caption>
+    <thead>
+      <tr><th scope="col" class="mono">when</th><th scope="col" class="mono">what</th><th scope="col" class="mono">where</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="mono">2018 – now</td><td>senior software engineer, nz trade group</td><td>auckland</td></tr>
+      <tr><td class="mono">2014 – 2018</td><td>graduate → intermediate → senior software engineer, aderant</td><td>auckland</td></tr>
+      <tr><td class="mono">2013</td><td>bachelor of computing and mathematical sciences (hons), first class</td><td>university of waikato</td></tr>
+      <tr><td class="mono">2012</td><td>dean's award for excellence</td><td>university of waikato</td></tr>
+    </tbody>
+  </table>
+  <p class="back mono"><a href="#top">back to the fun bit <span aria-hidden="true">↑</span></a></p>
+</section>
+
+<footer class="foot mono">
+  <p><a href="/classic/">the old one (2017), for archaeologists</a></p>
+  <p>no cookies. no analytics. google already knows.</p>
+</footer>
+
+<script src="js/site.js" defer></script>
 </body>
-
 </html>
