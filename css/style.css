@@ -209,7 +209,6 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 }
 .jb .made > li { font-size: clamp(19px, 2vw, 26px); }
 .jb .tag { display: inline-block; font-size: 11px; color: var(--hot-text); border: 1px solid currentColor; padding: 1px 6px; margin-right: 6px; vertical-align: middle; }
-.jb .three { font-weight: 800; text-shadow: -2px 0 rgba(255, 0, 60, .55), 2px 0 rgba(0, 170, 200, .6); }
 .jb .links a { font-weight: 700; }
 .jb .url { display: block; color: var(--ink-3); font-size: 12px; margin-top: 2px; }
 
